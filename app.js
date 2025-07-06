@@ -67,6 +67,11 @@ class BankAccount {
 }
 
 class Cat {
+
+    numLegs = 4;
+    hasTails = true;
+    name;
+
   constructor(name, breed) {
     this.name = name;
     this.breed = breed;
@@ -137,3 +142,4 @@ class Circle {
         return this._radius * 2;
     }
 }
+
