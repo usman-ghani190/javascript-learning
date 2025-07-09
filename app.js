@@ -67,10 +67,9 @@ class BankAccount {
 }
 
 class Cat {
-
-    numLegs = 4;
-    hasTails = true;
-    name;
+  numLegs = 4;
+  hasTails = true;
+  name;
 
   constructor(name, breed) {
     this.name = name;
@@ -115,31 +114,37 @@ class Ebook extends Book {
   }
 }
 
-
 // ArrayUtils Excercise:
 
 class ArrayUtils {
-    constructor() {
-        throw new Error("Array cannot be instantiated!");
-    }
+  constructor() {
+    throw new Error("Array cannot be instantiated!");
+  }
 
-    static average(arr) {
-        if (arr.length === 0) throw new Error("Array cannot  be empty");
-        return arr.reduce((sum, num) => sum + num, 0) / arr.length;
-    }
+  static average(arr) {
+    if (arr.length === 0) throw new Error("Array cannot  be empty");
+    return arr.reduce((sum, num) => sum + num, 0) / arr.length;
+  }
 
-    static max(arr) {
-        return Math.max(...arr);
-    }
+  static max(arr) {
+    return Math.max(...arr);
+  }
 }
 
 class Circle {
-    constructor(radius) {
-        this._radius = radius;
-    }
+  constructor(radius) {
+    this._radius = radius;
+  }
 
-    get diameter() {
-        return this._radius * 2;
-    }
+  get diameter() {
+    return this._radius * 2;
+  }
 }
 
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.speak = function () {
+  console.log(`${this.name} makes a sound!`);
+};
